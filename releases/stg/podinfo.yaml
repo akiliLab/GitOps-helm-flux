@@ -10,7 +10,7 @@ metadata:
 spec:
   releaseName: podinfo-rc
   chart:
-    git: git@github.com:stefanprodan/gitops-helm
+    git: git@github.com:akiliLab/GitOps-helm-flux
     path: charts/podinfo
     ref: stg
   values:
