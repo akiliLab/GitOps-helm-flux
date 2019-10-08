@@ -3,7 +3,7 @@
 replicaCount: 1
 backend: http://backend-podinfo:9898/echo
 
-image: stefanprodan/podinfo:0.4.0
+image: barniemakonda/podinfo:0.0.1
 imagePullPolicy: IfNotPresent
 
 service:
@@ -25,7 +25,8 @@ hpa:
 
 ingress:
   enabled: false
-  annotations: {}
+  annotations:
+    {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   path: /

@@ -14,7 +14,7 @@ spec:
     path: charts/podinfo
     ref: stg
   values:
-    image: stefanprodan/podinfo:stg-9ij63o4c
+    image: barniemakonda/podinfo:stg-upevr3al
     replicaCount: 2
     hpa:
       enabled: true
