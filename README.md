@@ -174,7 +174,7 @@ Using this chart I want to create a release in the `dev` namespace with the imag
 Instead of editing the `values.yaml` from the chart source, I create a `HelmRelease` definition (located in /releases/dev/podinfo.yaml):
 
 ```yaml
-apiVersion: flux.weave.works/v1beta1
+apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: podinfo-dev
@@ -250,7 +250,7 @@ Assuming the staging environment has some sort of automated load testing in plac
 I want to have a different configuration than dev:
 
 ```yaml
-apiVersion: flux.weave.works/v1beta1
+apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: podinfo-rc
@@ -303,7 +303,7 @@ Successfully tagged stefanprodan/podinfo:0.4.10
 If I want to automate the production deployment based on version tags, I would use `semver` filters instead of `glob`:
 
 ```yaml
-apiVersion: flux.weave.works/v1beta1
+apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: podinfo-prod
@@ -342,7 +342,7 @@ The Sealed Secrets Helm chart is available on [Helm Hub](https://hub.helm.sh/cha
 so I can use the Helm repository instead of a git repo. This is the sealed-secrets controller release:
 
 ```yaml
-apiVersion: flux.weave.works/v1beta1
+apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: sealed-secrets
@@ -450,7 +450,7 @@ container_name_2:
 Here is an example with different deployment automation policies:
 
 ```yaml
-apiVersion: flux.weave.works/v1beta1
+apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: openfaas
