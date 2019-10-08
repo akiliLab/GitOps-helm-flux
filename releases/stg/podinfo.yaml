@@ -12,7 +12,7 @@ spec:
   chart:
     git: git@github.com:stefanprodan/gitops-helm
     path: charts/podinfo
-    ref: master
+    ref: stg
   values:
     image: stefanprodan/podinfo:stg-9ij63o4c
     replicaCount: 2
